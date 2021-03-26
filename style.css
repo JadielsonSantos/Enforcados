@@ -1,0 +1,13 @@
+.body {
+    display: flex;
+    background-color: #351655;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    color:aliceblue;
+}
+.main {
+    display: block;
+    text-align: center;
+}
