@@ -1,15 +1,22 @@
-
+window.alert("Todas as palavras comecara com letras minuscula");
+window.addEventListener("load", inicia)
 const p = document.getElementById("resul");// pegando a tag p para colocar a palavra
+const bo = document.getElementById("bo");
 
 
-
-var letra = ["C", "u", "r", "s", "o"];
-var mostra = ["*", "*", "*", "*", "*"];
+var letra;
+var mostra;
 var elemento = document.getElementById("letra");
 var nu = document.getElementById("nu");
 let descricao = document.getElementById("descricao");
 
-nu.innerText = "Sua palavra contém: " + letra.length + " letras.";
+nu.innerText = "Sua palavra contém: " + letra+ " letras.";
+
+document.addEventListener('keypress', function(e){
+       if(e.which == 13){
+          pesquisa();
+       }
+}, false);
 
 function pesquisa() {
   if(elemento.value.length == 1) {
@@ -29,6 +36,9 @@ function pesquisa() {
         elemento.value = '';
       }
   }
+  if (elemento.value.length > letra.length || elemento.value.length > 1 && elemento.value.length < letra.length) {
+    alert("Error, Tente acerta letra por letra ou uma palavra que contem "+letra.length+" letra")
+  }
   if(elemento.value.length == letra.length) {
       const teste = letra.join("", ",");
       if(teste.includes(elemento.value)) {
@@ -45,8 +55,8 @@ function pesquisa() {
 function inicia() {
   var ids = Math.floor(Math.random()* 5); // sortea um numero entre 0 ate o length do array
   // Palavras usadas no jogo 
-  var lista1 = ["Uva", "Hora", "Curso", "Agriculto","Chuveiro", "Costureira"];
-  var lista2 = ["***", "****", "*****", "*********","********", "**********"];
+  var lista1 = ["uva", "hora", "curso", "agricultor","chuveiro", "costureira"];
+  var lista2 = ["***", "****", "*****", "**********","********", "**********"];
   var descri = ["Tem relação com Fruta!", "Tem relação com Tempo!", "Tem relação com aprendizado!", "Tem relação com Roça!","Tem no banheiro e todo mundo usa!","Todas as vós tem em casa!"]; 
   // vou pega a palavra sorteada
   string1 = lista1[ids];
