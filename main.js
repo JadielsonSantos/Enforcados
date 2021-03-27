@@ -55,9 +55,9 @@ function pesquisa() {
 function inicia() {
   var ids = Math.floor(Math.random()* 5); // sortea um numero entre 0 ate o length do array
   // Palavras usadas no jogo 
-  var lista1 = ["uva", "hora", "curso", "agricultor","chuveiro", "costureira"];
-  var lista2 = ["***", "****", "*****", "**********","********", "**********"];
-  var descri = ["Tem relação com Fruta!", "Tem relação com Tempo!", "Tem relação com aprendizado!", "Tem relação com Roça!","Tem no banheiro e todo mundo usa!","Todas as vós tem em casa!"]; 
+  var lista1 = ["uva", "hora", "curso", "agricultor","chuveiro", "costureira", "celular"];
+  var lista2 = ["***", "****", "*****", "**********","********", "**********", "*******"];
+  var descri = ["Tem relação com Fruta!", "Tem relação com Tempo!", "Tem relação com aprendizado!", "Tem relação com Roça!","Tem no banheiro e todo mundo usa!","Todas as vós tem em casa!", "O que tem em toda casa, e ninguem larga"];
   // vou pega a palavra sorteada
   string1 = lista1[ids];
   string2 = lista2[ids];
