@@ -1,5 +1,8 @@
-// pegando a tag p para colocar a palavra
-const p = document.getElementById("resul");
+
+const p = document.getElementById("resul");// pegando a tag p para colocar a palavra
+
+
+
 var letra = ["c", "u", "r", "s", "o"];
 var mostra = ["*", "*", "*", "*", "*"];
 var elemento = document.getElementById("letra");
@@ -40,12 +43,20 @@ function pesquisa() {
   }
 }
 function inicia() {
-  letra = ["h", "o", "r", "a"];
-  mostra = ["*", "*", "*", "*"];
-  console.log(letra);
-  console.log(mostra);
-  alert("Iniciar um novo jogo?");
-  descricao.innerText = "Tem relação com convenções.";
+  var ids = Math.floor(Math.random()* 2); // sortea um numero entre 0 ate o length do array
+  // Palavras usadas no jogo 
+  var lista1 = ["uva", "hora", "curso", "agriculto","chuveiro", "costureira"];
+  var lista2 = ["***", "****", "*****", "*********","********", "**********"];
+  var descri = ["Tem relação com Fruta!", "Tem relação com Tempo!", "Tem relação com aprendizado!", "Tem relação com Roça!","Tem no banheiro e todo mundo usa!","Todas as vós tem em casa!"]; 
+  // vou pega a palavra sorteada
+  string1 = lista1[ids];
+  string2 = lista2[ids];
+  string3 = descri[ids];
+  // vou serapa letra por letra e colocando uma ,
+  letra = string1.split("");
+  mostra = string2.split("");
+  descricao.innerText = string3;
+  elemento.value = '';
+  p.innerText = "";
   nu.innerText = "Sua palavra contém: " + letra.length + " letras.";
-  p.innerText  = "";
 }
