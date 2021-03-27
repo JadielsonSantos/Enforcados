@@ -43,7 +43,7 @@ function pesquisa() {
   }
 }
 function inicia() {
-  var ids = Math.floor(Math.random()* 2); // sortea um numero entre 0 ate o length do array
+  var ids = Math.floor(Math.random()* 5); // sortea um numero entre 0 ate o length do array
   // Palavras usadas no jogo 
   var lista1 = ["uva", "hora", "curso", "agriculto","chuveiro", "costureira"];
   var lista2 = ["***", "****", "*****", "*********","********", "**********"];
