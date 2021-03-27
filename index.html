@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Enforcados - Jogo da Forca</title>
 </head>
+
 <body>
     <div class="body">
         <div class="main">
             <div class="head">
-                <p id="tempo">3 segundos para começar o novo jogo!</p>
+                <p id="tempo">Demora 3 segundos para começar um novo jogo!</p>
             </div>
             <div class="botao">
 
-                <span id="nu"></span>
+                <span id="dica"></span>
                 <br>
-                <span id="descricao">Tem relação com aprendizado. </span>
-                <p id="resul"></p>
-                <div class="bu">
+                <span id="descricao">Tem relação com aprendizado.</span>
+                <p id="resultado"></p>
+
+                <div>
                     <input type="text" name="letra" id="letra">
-                    <button onclick="pesquisa()" type="submit">&#129300;</button>
+                    <button onclick="pesquisar()" type="submit">&#129300;</button>
                 </div>
+
             </div>
         </div>
     </div>

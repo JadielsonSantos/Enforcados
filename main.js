@@ -1,24 +1,26 @@
-// pegando a tag p para colocar a palavra
-const p = document.getElementById("resul");
-var letra = ["c", "u", "r", "s", "o"];
-var mostra = ["*", "*", "*", "*", "*"];
-var elemento = document.getElementById("letra");
-var nu = document.getElementById("nu");
+// Pegando a tag (p) com id resultado para colocar a palavra ao acertar.
+const resultado = document.getElementById("resultado");
+
+let letra = ["c", "u", "r", "s", "o"];
+let mostra = ["*", "*", "*", "*", "*"];
+let elemento = document.getElementById("letra");
+let dica = document.getElementById("dica");
 let descricao = document.getElementById("descricao");
 
-nu.innerText = "Sua palavra contém: " + letra.length + " letras.";
+dica.innerText = "Sua palavra contém: " + letra.length + " letras.";
 
-function pesquisa() {
+function pesquisar() {
   if(elemento.value.length == 1) {
       if(letra.includes(elemento.value)){
         var id = letra.indexOf(elemento.value);
         mostra[id] = elemento.value;
-        p.innerText  = mostra.join("", ",");
+        resultado.innerText  = mostra.join("", ",");
         elemento.value = '';
+        
         if(mostra.length == letra.length && mostra.includes("*") == false) {
-        alert("Parabéns você acertou!!!");
-        elemento.value = '';
-        setTimeout(inicia, 3000);
+          alert("Parabéns você acertou!!!");
+          elemento.value = '';
+          setTimeout(iniciar, 3000);
         }
 
       }else {
@@ -28,24 +30,30 @@ function pesquisa() {
   }
   if(elemento.value.length == letra.length) {
       const teste = letra.join("", ",");
+
       if(teste.includes(elemento.value)) {
-        p.innerText = teste;
+        resultado.innerText = teste;
         alert("Parabéns você acertou!!!");
         elemento.value = '';
-        setTimeout(inicia, 3000);
+        setTimeout(iniciar, 3000);        
       }else {
         alert("Palavra errada: " + elemento.value + "!");
         elemento.value = '';
       }
   }
 }
-function inicia() {
-  letra = ["h", "o", "r", "a"];
-  mostra = ["*", "*", "*", "*"];
+
+
+function iniciar() {
+  let letra = ["h", "o", "r", "a"];
+  let mostra = ["*", "*", "*", "*"];
+  
   console.log(letra);
   console.log(mostra);
+  
   alert("Iniciar um novo jogo?");
+  
   descricao.innerText = "Tem relação com convenções.";
-  nu.innerText = "Sua palavra contém: " + letra.length + " letras.";
-  p.innerText  = "";
+  dica.innerText = "Sua palavra contém: " + letra.length + " letras.";
+  resultado.innerText  = "";
 }
