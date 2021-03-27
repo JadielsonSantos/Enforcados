@@ -3,7 +3,7 @@ const p = document.getElementById("resul");// pegando a tag p para colocar a pal
 
 
 
-var letra = ["c", "u", "r", "s", "o"];
+var letra = ["C", "u", "r", "s", "o"];
 var mostra = ["*", "*", "*", "*", "*"];
 var elemento = document.getElementById("letra");
 var nu = document.getElementById("nu");
@@ -45,7 +45,7 @@ function pesquisa() {
 function inicia() {
   var ids = Math.floor(Math.random()* 5); // sortea um numero entre 0 ate o length do array
   // Palavras usadas no jogo 
-  var lista1 = ["uva", "hora", "curso", "agriculto","chuveiro", "costureira"];
+  var lista1 = ["Uva", "Hora", "Curso", "Agriculto","Chuveiro", "Costureira"];
   var lista2 = ["***", "****", "*****", "*********","********", "**********"];
   var descri = ["Tem relação com Fruta!", "Tem relação com Tempo!", "Tem relação com aprendizado!", "Tem relação com Roça!","Tem no banheiro e todo mundo usa!","Todas as vós tem em casa!"]; 
   // vou pega a palavra sorteada
