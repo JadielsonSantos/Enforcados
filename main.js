@@ -45,8 +45,8 @@ function pesquisar() {
 
 
 function iniciar() {
-  let letra = ["h", "o", "r", "a"];
-  let mostra = ["*", "*", "*", "*"];
+  letra = ["h", "o", "r", "a"];
+  mostra = ["*", "*", "*", "*"];
   
   console.log(letra);
   console.log(mostra);
